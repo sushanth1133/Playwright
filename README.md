@@ -102,7 +102,7 @@ This repository contains an example Playwright test suite for the [TodoMVC appli
 
 ## 🧪 Running Tests
 
-This suite includes a comprehensive set of tests for the TodoMVC application, covering functionalities like adding, editing, completing, and deleting todos.
+This suite includes a comprehensive set of tests for the Sauce Labs application, covering functionalities
 
 To run the entire test suite, use the following command:
 
@@ -140,8 +140,8 @@ This will open a web server and display a detailed, interactive report of the te
 
 ## 📂 Project Structure
 
--   `tests-examples/`: Contains the test files.
-    -   `demo-todo-app.spec.js`: The main test file for the TodoMVC application.
+-   `tests/`: Contains the test files.
+    -   `loginWorkflow.spec.js`: The main test file for the login workflow of the application.
 -   `playwright.config.js`: The main configuration file for Playwright.
 -   `playwright-report/`: This directory contains the HTML report generated after a test run. It should typically be added to `.gitignore`.
 -   `package.json`: Defines project metadata and dependencies.
