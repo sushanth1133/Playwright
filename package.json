@@ -1,0 +1,25 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sushanth1133/Playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sushanth1133/Playwright/issues"
+  },
+  "homepage": "https://github.com/sushanth1133/Playwright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.54.1",
+    "@types/node": "^24.0.14"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.0"
+  }
+}
