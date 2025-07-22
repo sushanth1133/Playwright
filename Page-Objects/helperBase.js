@@ -6,6 +6,9 @@ export class HelperBase {
 
     constructor(page) {
         this.page = page;
+        this.allItemsMenu = this.page.locator('#menu_button_container')
+        this.shoppingCart = this.page.locator('#shopping_cart_container')
+        
     }
 
     /**

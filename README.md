@@ -1,41 +1,61 @@
-# Playwright Test Suite
+# Playwright E2E Test Suite for Sauce Labs Demo
 
-This repository holds a sample Playwright test suite for the [Sauce Labs application](https://www.saucedemo.com/). I've added these instructions to make it easy to get up and running.
+This repository contains a robust and scalable end-to-end test suite built with [Playwright](https://playwright.dev/) for the [Sauce Labs "Swag Labs" demo application](https://www.saucedemo.com/).
+
+The primary goal of this project is to demonstrate a professional approach to test automation, focusing on best practices like the Page Object Model (POM), clean code, and maintainability.
+
+## ✨ Key Features
+
+*   **Page Object Model (POM):** The suite is structured using the POM design pattern, which makes the code cleaner, more reusable, and easier to maintain by separating page-specific logic from test cases.
+*   **Comprehensive Test Coverage:** Includes a variety of tests covering critical user workflows:
+    *   Successful and unsuccessful login/logout.
+    *   End-to-end checkout with single and multiple items.
+    *   Shopping cart management (adding/removing items).
+    *   Form validation for the checkout process.
+*   **Cross-Browser Compatibility:** Configured to run tests across major browsers (Chromium, Firefox, WebKit) to ensure consistent application behavior.
+*   **CI/CD Ready:** The configuration is optimized for integration into Continuous Integration pipelines.
+*   **Detailed HTML Reporting:** Generates an interactive HTML report after each run, complete with test results, traces, and screenshots for easy debugging.
+*   **Environment-Based Configuration:** Uses `.env` files to manage sensitive data like credentials, keeping them separate from the codebase.
 
 ## 🚀 Getting Started
 
-Here’s what you need and how to install the project.
-
 ### Prerequisites
 
-*   **Node.js**: Version 18 or higher is recommended.
-*   **Package Manager**: npm, pnpm, or yarn.
+*   Node.js (v18 or higher is recommended)
+*   An NPM client (npm, pnpm, or yarn)
 
 ### Installation
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/sushanth1133/Playwright.git
+    git clone <your-repository-url>
     ```
 2.  **Navigate to the project directory:**
     ```bash
     cd Playwright
     ```
-3.  **Install dependencies:**
+3.  **Install project dependencies:**
     ```bash
     npm install
     ```
 4.  **Install Playwright browsers:**
-    This step downloads the browsers (Chromium, Firefox, WebKit) that Playwright needs to run the tests.
+    This command downloads the browser binaries required for testing.
     ```bash
     npx playwright install
+    ```
+5.  **Set up environment variables:**
+    Create a file named `.env.prod` in the `/env` directory. This file will store the application credentials.
+    ```
+    # ./env/.env.prod
+
+    url=https://www.saucedemo.com/
+    userId=standard_user
+    password=secret_sauce
     ```
 
 ## 🧪 Running Tests
 
-The test suite covers the main features of the TodoMVC app, including adding, editing, completing, and deleting todos.
-
-**To run the entire test suite**, use the following command. This will execute the tests in headless mode across all configured browsers.
+To run the entire test suite in headless mode across all configured browsers, use the following command:
 ```bash
 npm test
 ```
